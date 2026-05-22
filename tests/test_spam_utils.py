@@ -1,7 +1,7 @@
 from spam_utils import preprocess_message
 
-def test_preprocess_strips_leading_trailing_whitespace():
-    assert preprocess_message("  hello world  ") == "hello world"
+def test_preprocess_strips_and_lowercases_text():
+    assert preprocess_message("  HeLLo WoRLD  ") == "hello world"
 
 def test_preprocess_empty_string():
     assert preprocess_message("") == ""
