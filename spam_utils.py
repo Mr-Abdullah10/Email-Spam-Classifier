@@ -2,4 +2,4 @@ def preprocess_message(text: str) -> str:
     """Prepare message text before vectorization."""
     if text is None:
         return ""
-    return text  # bug: no strip, no lowercase
+    return text.strip().lower()
